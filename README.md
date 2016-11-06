@@ -17,9 +17,9 @@ Angular 2, Angular 1, Angular Material, and AngularFire.
 Angular Pakistan (ngPakistan) Team
 
 ## Core Contributors
-> Muhammad Kamran Qadri ( angular.io.urdu -  Project Lead )
-> Taimoor Saeed 
-> Anas Raza Firdousi ( Creator of Angular Pakistan Community )
+* Muhammad Kamran Qadri ( angular.io.urdu -  Project Lead )
+* Taimoor Saeed 
+* Anas Raza Firdousi ( Creator of Angular Pakistan Community )
 
 
 ##Other Links
