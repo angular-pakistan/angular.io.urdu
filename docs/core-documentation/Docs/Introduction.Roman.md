@@ -5,7 +5,7 @@ Tour of Heroes Tutorial Angular ki bunyadi usool (fundamentals) par mushtamil ha
 Is Tutorial me ap aik aisi Application banaein gain jo aik (Staffing Agency) ko apnay (Stable Heroes) ko munazzam 
 (Manage) karnay me madad degi.
 
-Is bunyadi (Basic) Application aisay bohat saray features hain kai jo ap aik (Data-Driven Application) me dekhein gain. Ye Application Heroes ki list legi or usse dekhay gi, Kisi bhi muntakhib Hero ki malomaat (Detail) me Tarmeem (Edit) karti hai, or heroes kai (Data) kai mukhtalif zawiyon ki taraf (Navigate) karti hai.
+Is bunyadi (Basic) Application me aisay bohat saray features hain kai jo ap aik (Data-Driven Application) me dekhein gain. Ye Application Heroes ki list legi or usse dekhaei gi, Kisi bhi muntakhib Hero ki malomaat (Detail) me Tarmeem (Edit) karti hai, or heroes kai (Data) kai mukhtalif zawiyon ki taraf (Navigate) karti hai.
 
 Is Tutorial kai ikhtitam (End) par ap Darj Zail (Following) kam karnay kai qabil (Able) ho jain gain.
 
@@ -27,25 +27,25 @@ Yahan aik Tasweeri Khaka (Visual idea) hai kai ye (Tutorial) kaha tak rehnumai (
 
 ![](https://angular.io/generated/images/guide/toh/heroes-dashboard-1.png)
 
-Ap in Dono (Links) par (Click) kar saktay hain Jo kai ()(Dashboard) kai opper hain ("Dashboard") or  ("Heroes") jo kai (Navigate) karein gain (Dashboard View) or (Heroes View) kai darmiyan.
+Ap in Dono (Links) par (Click) kar saktay hain Jo kai (Dashboard) kai opper hain ("Dashboard") or  ("Heroes") jo kai (Navigate) karein gain (Dashboard View) or (Heroes View) kai darmiyan.
 
-Ager ap (Dasboard Hero) "Magenta" ka click kartay hain to ye route (Hero Detail) ko Khol dega jahan ap Hero ka nam badal (Change) kar saktay hain.
+Ager ap (Dashboard Hero) "Magenta" ko click kartay hain to ye route (Hero Detail) ko Khol dega jahan ap Hero ka nam badal (Change) kar saktay hain.
 
 ![](https://angular.io/generated/images/guide/toh/hero-details-1.png)
 
-("Back" Button) ko Click kartay hi ap (Dashboard) par ajain gai. Uper Links apko (Main Views) ki taraf lay jain gain. Ager Ap ("Heroes") par click karein kartay hain to app (Heroes) ki (Master List View) dekhay gi.
+("Back" Button) ko Click kartay hi ap (Dashboard) par ajain gai. Uper Links apko (Main Views) ki taraf lay jain ge. Ager Ap ("Heroes") par click karein kartay hain to app (Heroes) ki (Master List View) dekhay gi.
 
 ![](https://angular.io/generated/images/guide/toh/heroes-list-2.png)
 
-Jab ap mukhtalif (Hero) ka nam par (Click) karein gai,to aik mukhtasar si malomaat (mini Detail) (Read-only) nichay ajain gi. or list nai (Choice)  zahir (Reflect) karay gi.
+Jab ap mukhtalif (Hero) ka nam par (Click) karein gai,to aik mukhtasar si malomaat (mini Detail) (Read-only) nichay ajain gi. or list nai (New) (Choice)  zahir (Reflect) karay gi.
 
 Ap ("View Detail" Button) par click kar saktay hain takay ap muntakhib (Selected Hero) ki malomaat
 (Detail) ko tarmeem kai qabil (Editable) kar sakein.
 
-Man darja zail Diagram (Following Diagram) ne tamam (Navigation Options) ki tasweer kashi (Captures) ki howi hai.
+Man-darja zail Diagram (Following Diagram) ne tamam (Navigation Options) ki tasweer kashi (Captures) ki howi hai.
 
 ![](https://angular.io/generated/images/guide/toh/nav-diagram.png)
 
-Yahan Chalti howi Application:
+### Yahan Chalti howi Application:
 
 ![](https://angular.io/generated/images/guide/toh/toh-anim.gif)
