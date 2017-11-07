@@ -9,15 +9,15 @@ Is bunyadi (Basic) Application aisay bohat saray features hain kai jo ap aik (Da
 
 Is Tutorial kai ikhtitam (End) par ap Darj Zail (Following) kam karnay kai qabil (Able) ho jain gain.
 
-    *(Elements) or Heroes ki (Data List) ko Dekhanay (Show) or Chupanay (Hide) kai lia Angular kai (Built-in Directives) ka Istimal.
-    *Heroes ki detail ko dekhanay or Heroes kai (Array) ko Dekhanay kai lia Angular Components ko banana.
-    *(One-way Data Binding) ko (Read-Only Data) kai istimal karna.
-    *Qabil-e-Tarmeem (Editable) Fields ko (Model) ko (Update) karnay kai lia Shamil (Add) karna (Two-Way Binding) kai sath.
-    *(Component Methods) ko (User Events) kai sath (Bind) karna, jeesakai (KeyStrokes) or (Clicks).
-    *Sarifeen (Users) ko (Master List) me se (Hero) ko muntakhib (Select) karnay kai Qabil banana or us (Hero) ki (Detail) me Tarmeem (Edit) karna.
-    *(Data) ki Tashkeel (Format) karna (Pipes) kai sath.
-    *Heroes ko jama (Assemble) karnay kai lia Mushtarqa Service (Shared Service) banana.
-    *(Routing) ko mukhtalif (Different) (Views) or (Components) ki taraf (Navigate) karnay kai lia istimal karna.
+    * (Elements) or Heroes ki (Data List) ko Dekhanay (Show) or Chupanay (Hide) kai lia Angular kai (Built-in Directives) ka Istimal.
+    * Heroes ki detail ko dekhanay or Heroes kai (Array) ko Dekhanay kai lia Angular Components ko banana.
+    * (One-way Data Binding) ko (Read-Only Data) kai istimal karna.
+    * Qabil-e-Tarmeem (Editable) Fields ko (Model) ko (Update) karnay kai lia Shamil (Add) karna (Two-Way Binding) kai sath.
+    * (Component Methods) ko (User Events) kai sath (Bind) karna, jeesakai (KeyStrokes) or (Clicks).
+    * Sarifeen (Users) ko (Master List) me se (Hero) ko muntakhib (Select) karnay kai Qabil banana or us (Hero) ki (Detail) me Tarmeem (Edit) karna.
+    * (Data) ki Tashkeel (Format) karna (Pipes) kai sath.
+    * Heroes ko jama (Assemble) karnay kai lia Mushtarqa Service (Shared Service) banana.
+    * (Routing) ko mukhtalif (Different) (Views) or (Components) ki taraf (Navigate) karnay kai lia istimal karna.
 
 Ap Angular ko shoro karnay kai lia bohat kuch sekhein gain or Aetimad (Confidence) barhaein gai kai Angular har wo kam kar sakta hai or ap is se chahtay hain.
 
