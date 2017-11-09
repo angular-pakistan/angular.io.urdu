@@ -107,3 +107,62 @@ body, input[text], button {
   font-family: Arial, Helvetica, sans-serif;
 }
 ```
+
+## Code ka akhari jaiza (Review)
+
+Is tutorial ka (Source code) or (Tour of Heroes) kai mukamal (Global Styles) [live example](https://angular.io/generated/live-examples/toh-pt0/eplnkr.html) / [download example](https://angular.io/generated/zips/toh-pt0/toh-pt0.zip)
+
+Yahan code files mujood hain jin ko is page per (Discussed) kia gaya hai.
+
+> src/app/app.component.ts
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Tour of Heroes';
+}
+```
+
+> src/app/app.component.html
+```javascript
+<h1>{{title}}</h1>
+```
+
+> src/styles.css (excerpt)
+
+```javascript
+/* Application-wide Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+## Khulasa (Summary)
+
+* Apnay Angular Cli ko istimal kartay howa bunyadi (Initial) Applicaiton ki Sa'akht (Structure) banaya.
+* Apnay ye sekha kai (Angular Components) Data ko dekhatay hain.
+* Apnay Application kai (Title) ko dekhanay kai lia (Double Curly Braces Interpolation) ko istimal kia.
+
