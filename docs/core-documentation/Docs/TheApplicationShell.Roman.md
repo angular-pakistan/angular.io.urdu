@@ -2,11 +2,15 @@
 
 Fahrist (Contents) >
 
- Angular Cli ko (Install) karein
- Nai Application (New Application) Banaein.
- Application ko pesh (Serve) karein.
+* Angular Cli ko (Install) karein
+* Nai Application (New Application) Banaein.
+* Application ko pesh (Serve) karein.
+* Angular kai (Components)
+* Application kai unwan (Title) ko tabdeel (Change) karein
+* Application me (Styles) shamil (Add) karein
+* Ikhtitami (Final Code Review)
+* Khulasa (Summary)
 
-**...**
 
 ## Angular Cli ko (Install) karein
 
