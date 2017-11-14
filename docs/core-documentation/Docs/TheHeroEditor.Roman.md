@@ -88,3 +88,9 @@ Hameesha (Component Class) ko ```export``` kia karein takai ap is ko kahein or s
 ```javascript
 {{hero}}
 ```
+
+## (HeroesComponent View) ko dekhaein
+
+```HeroesComponent``` ko dekhanay kai lia, Apko isko ```AppComponent``` ka (Shell) (Template) me dalana paray ga.
+
+Ye yad rakhein kai ```app-heroes``` [Element Selector](https://angular.io/tutorial/toh-pt1#selector) hai ```HeroesComponent``` kai lia.
