@@ -94,3 +94,74 @@ Hameesha (Component Class) ko ```export``` kia karein takai ap is ko kahein or s
 ```HeroesComponent``` ko dekhanay kai lia, Apko isko ```AppComponent``` ka (Shell) (Template) me dalana paray ga.
 
 Ye yad rakhein kai ```app-heroes``` [Element Selector](https://angular.io/tutorial/toh-pt1#selector) hai ```HeroesComponent``` kai lia.
+```AppComponent``` (Template file) me aik ```<app-heroes>``` (Element) shamil karein. bilkul (Title) kai nichay.
+
+> src/app/app.component.html
+```javascript
+  <h1>{{title}}</h1>
+  <app-heroes></app-heroes>
+```
+
+Is baat ko farz (Assumme) kartay howay kai ```ng serve``` (CLI Command) chal rahi hai. (Browser Refresh) hoga or application kai (Title and Name) ko dekhae ga.
+
+## Hero (Class) ko banaein.
+
+Asli hero nam (Name) se kuch barh kar hota hai.
+
+```src/app``` (Folder) me Hero (Class) banaein iski apni (File) me or usko ```id``` or ```name``` (Property) de dein.
+
+> src/app/hero.ts
+
+```javascript
+  export class Hero {
+    id: number;
+    name: string;
+  }
+```
+
+Ab ```HeroesComponent``` (Class) kai pas dobara aein or  ```Hero Class``` ko (Import) karlein.
+
+```Hero Componenet``` ki (Property) ko ```Hero``` ki type banany kai lia ```hero``` kai (Component) ko (Refactor) karein.
+
+Nazar sani shuda (Revised) (Component) kuch is tarah dekhay ga.
+
+> src/app/heroes/heroes.component.ts
+
+```javascript
+  import { Component, OnInit } from '@angular/core';
+import { Hero } from '../hero';
+
+@Component({
+  selector: 'app-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
+})
+export class HeroesComponent implements OnInit {
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  };
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+```
+
+Ab Page sahi tareeqai se nahi dekhay ga kio kai apne hero ko (String) se (Object) me  badal diya hai.
+
+## Hero (Object) ko Dekhain
+
+(Binding) ko (Template) me (Update) karein (Hero's) kai nam (Name) ko dekhanay kai lia or ```id``` or ```name``` dono ko (Detail Layout) me dikhanay kai lai. Is Tarah :
+
+> heroes.component.html (HeroesComponent's template)
+
+```javascript
+  <h2>{{ hero.name }} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div><span>name: </span>{{hero.name}}</div> 
+```
+(Browser) (Refresh) hoga or (Hero's Information) dekhany lagay ga. 
