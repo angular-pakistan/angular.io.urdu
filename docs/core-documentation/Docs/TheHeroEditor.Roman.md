@@ -164,4 +164,26 @@ Ab Page sahi tareeqai se nahi dekhay ga kio kai apne hero ko (String) se (Object
   <div><span>id: </span>{{hero.id}}</div>
   <div><span>name: </span>{{hero.name}}</div> 
 ```
-(Browser) (Refresh) hoga or (Hero's Information) dekhany lagay ga. 
+(Browser) (Refresh) hoga or (Hero's Information) dekhany lagay ga.  
+
+## (UppercasePipe) Kai sath tashkeel (Format) karein
+
+```hero.name``` (Binding) me is tarah tarmeem (Modify) karein:
+
+```javascript
+  <h2>{{ hero.name | uppercase }} Details</h2>
+``` 
+
+Browser (Refresh) hoga or ab (Hero Name) baray huroof (Capital Letters) me dekhae dega.
+
+(Interpolation Binding) me lafz (Word) ```uppercase``` 
+( | ) Operator kai foran bad anay wala mutaharik (Activates) kardeta hai (Built-in ```UppercasePipe```) ko.
+
+[Pipes](https://angular.io/guide/pipes) aik acha tareeka hai (Strings , Currency Amounts, Dates or degar (Other) display data) ko tashkeel (Format) karnay kai lia .
+Angular kai bohat se (Built-in Pipes) hain or ap apna bhi bana saktay hain.
+
+## Hero ki Tarmeem (Edit) karein
+
+Sarif (User) Hero kai nam ko ```<input>``` (TextField) me tarmeem karnay kai ahal (Able) honay chahiye.
+
+(Textbox) Hero ka nam bhi dekhay or jo sarif (User) indiraj (Type) karay wo bhi dekhae.       
