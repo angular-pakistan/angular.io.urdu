@@ -186,4 +186,48 @@ Angular kai bohat se (Built-in Pipes) hain or ap apna bhi bana saktay hain.
 
 Sarif (User) Hero kai nam ko ```<input>``` (TextField) me tarmeem karnay kai ahal (Able) honay chahiye.
 
-(Textbox) Hero ka nam bhi dekhay or jo sarif (User) indiraj (Type) karay wo bhi dekhae.       
+(Textbox) Hero ka nam bhi dekhay or jo sarif (User) indiraj (Type) karay wo bhi dekhae. Is ka matlab ye kai (Data) (Component Class) se (Screen) ki taraf jaiga or (Screen) se (Class) ki taraf wapis jaiga.
+ 
+Is tarah kai (Data Flow) ko khudkar (Automate) karnay kai lia ```input``` form or ```hero.name``` property element kai darmiyan (Between) do-tarfa (Two-way Binding) ko (Setup) karein.
+
+## Do-tarfa Binding (Two-way binding) 
+
+(Detail Area) ko ```HeroesComponent``` template me (Refactor) karein. to ye ab kuch is tarah dekhae de ga:
+
+> src/app/heroes/heroes.component.html (HeroesComponent's template)
+
+```javascript
+<div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+</div>
+```
+[(ngModel)] ye Angular ka aik do-tarfa binding ka tareekae kar (Two-way Data Binding Syntax) hai.
+
+Yahan ye (Syntax) ```hero.name``` property ko (HTML Textbox) se bind kar raha hai. to ab (Data) dono simit (Both Direction) (Flow) kar sakta hai: ```hero.name``` property se (Textbox) ki taraf or (Textbox) se ```hero.name``` ki taraf.
+
+## Gumshuda FormsModule (The missing FormsModule)
+
+is Baat ko zehan nasheen (Notice) karlen kai  [[(ngModel)]](https://angular.io/api/forms/NgControlStatus) ko shamil (Add) kartay hi application kam karna chor degi.
+
+(error) ko dekhany kai lia, (Browser Development Tools) ko kholein (Open) or (Console) me is tarah kai aik pegam (Message) ko talash karein:
+ ```
+ Template parse errors:
+Can't bind to 'ngModel' since it isn't a known property of 'input'.
+ ```
+ Agerchai (Although)  [ngModel](https://angular.io/api/forms/NgControlStatus) aik durust (Valid Directive) hai, ye (By default) dastiyab (Availiable) nahi hota.
+
+ Ye ikhtiyari (Optional) [FormsModule](https://angular.io/api/forms/FormsModule) se mutaliq (Belong) hai or apko zarori hai kai ise istimal karnay kai lia ```opt-in``` karein.
+
+ ## AppModule
+
+
+
+
+
+
+
+
+
+
