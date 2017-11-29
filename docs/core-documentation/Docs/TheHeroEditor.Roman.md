@@ -222,12 +222,165 @@ Can't bind to 'ngModel' since it isn't a known property of 'input'.
 
  ## AppModule
 
+Angular kai lia ye janna zarori hai kai apki Application kai tukray (Peices) apas me kis tarah jurein gain or application ko degar (Other) kon konsi files or (Libraries) darkar (Required) hain. Is tarah ki maloomat (Information) (MetaData) kehlati hain.
 
+(Metadata) me se baz (Some) wo (Metadata) kai jo 
+```@component``` decorators me hain jinhein apne shamil (Add) kia tha (Component Class) me, or degar pecheda (Critical Metadata) [@NgModule](https://angular.io/guide/ngmodule) decorators me hotay hain.
 
+Intihaae zaroori (The Most Important) ```@NgModel``` decorator (Top-Level AppModule Class) ki tashreeh (Annotates) karta hai.
 
+Angular (CLI) ```src/app/app.module.ts``` me aik ```AppModule``` class banati hai jab (Project) ko banaya jata hai.Ye wo jaga hai kai jahan ap ```opt-in``` kartay hain ```FormsModule``` me.
 
+## Import FormsModule
 
+```AppModule``` (```app.module.ts```) ko kholein (Open) or ```FormsModule``` (Symbol) ko ```@angular/forms``` library se import karein. 
 
+> app.module.ts (FormsModule symbol import)
 
+```javascript
+  import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+```
 
+Phir ```FormsModule``` ko ```@NgModule``` metadata kai ```import``` array me shamil (Add) kardein, jis kai pas un (External Modules) ki List hogi kai jin kai (Application) ko zarorat hai.
 
+> app.module.ts ( @NgModule imports)
+
+```javascript
+  imports: [
+  BrowserModule,
+  FormsModule
+],  
+```
+
+Jab Browser (Refresh) hoga, Application do-bara (Again) qabil -e- istimal hojaigi . Ap hero ka nam tabdeel kar sakein gain or tabdeeli ko hama waqt (Immediately) ```<h2>``` me (Textbox) kai opper dekh sakein gain.
+
+## Declare HeroesComponent 
+
+Har component biz zaroor (Must Be) (Declared) hona chahiye aik [NgModule](https://angular.io/guide/ngmodule) me.
+
+Apnay to ```HeroesComponent``` ko (Declare) nahi kia tha phir Application kesay chal rahi hai?
+
+Ye is waja se chal rahi hai kio kai Angular CLI ne ```HeroComponent``` ko us waqt ```AppModule``` me (Declare) kardiya tha jab is ne component ko banaya (Generate) kia tha.
+
+```src/app/app.module.ts``` ko kholein or ```HerosComponent``` ko talash (Find) karein jo balaee satah (Near The Top) par (Import) kiye gai hein.
+
+```javascript
+  import { HeroesComponent } from './heroes/heroes.component';
+```
+
+```HerosComponent``` (Declare) hai ```@NgModule.declarations``` array me.
+
+```javascript
+declarations: [
+  AppComponent,
+  HeroesComponent
+],
+```
+Is baat ko malhooz-e-Khatir (Note) rakhein kai ```AppModule``` Application kai dono Components ```AppComponent``` or ```HeroesComponent``` ko (Declare) karta hai.
+
+## Code ka akhari jaiza (Review)
+
+Ap apki application is tarah dekhni chahiye [Barah-e-Rasst Misal](https://angular.io/generated/live-examples/toh-pt1/eplnkr.html) / [Example Download](https://angular.io/generated/zips/toh-pt1/toh-pt1.zip). Yahan un files ka code hai jis kai baray me is safhay (Page) par guftugu (Discussed) ki gai.
+
+> src/app/heroes/heroes.component.ts
+
+```javascript
+import { Component, OnInit } from '@angular/core';
+import { Hero } from '../hero';
+
+@Component({
+  selector: 'app-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
+})
+export class HeroesComponent implements OnInit {
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  };
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+> src/app/heroes/heroes.component.html
+
+```javascript
+<h2>{{ hero.name | uppercase }} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+</div>
+```
+
+> src/app/app.module.ts
+
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
+import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeroesComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+> src/app/app.component.ts
+
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Tour of Heroes';
+}
+```
+
+> src/app/app.component.html
+
+```javascript
+<h1>{{title}}</h1>
+<app-heroes></app-heroes>
+```
+
+> src/app/hero.ts
+
+```javascript
+export class Hero {
+  id: number;
+  name: string;
+}
+```
+
+## Khulasa (Summary)
+
+ * Apne CLI ko istimal kartay howay dosra ```HeroesComponent``` banaya.
+ * Apne ```AppComponent``` shell me shamil (Add) kartay howay ```HeroesComponent``` ko dekhaya.
+ * Apne ```UppercasePipe ``` format ko nam (Name) par lago (Apply) kia.
+ * Apne ```ngModel``` directive kai sath do-tarfa (Two-way data binding) ko istimal kia.
+ * Apne ```AppModule``` kai baray me sekha.
+ * Apne ne ```FormsModule``` ko ```AppModule``` me (Import) karwaya to Angular is qabil hogaya kai isay tasleem (Recognize) karay or ```ngModel``` (Directive) is par lago (Apply) karay.
+ * Apne Components ko ```AppModule``` me (Declare) karnay ki ahmiyat (Importance) ko sekha or qabil sataish (Appreciated) baat hai kai CLI ne isay khud apkai lia (Declare) kia hai.
