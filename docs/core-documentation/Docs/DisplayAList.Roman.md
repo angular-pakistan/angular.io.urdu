@@ -92,3 +92,28 @@ Browser kai refresh honay kai bad heroes ki List dekhay gi.
 Heroes ki list ko pur kashish (Attractive) hona chahiye or jab User us par mouse over karay to visually respond karna chahiye or hero ko list me se uthaei.
 
 Pehlay ![Tutorial](https://angular.io/tutorial/toh-pt0#app-wide-styles) me apne basic styles ko pori application kai lia ```styles.css``` me set kia.Is styleSheet me heroes ki list kai lia koi style shamil nahi tha.
+
+Ap mazeed styles ko shamil kar saktay hain ```styles.css``` or us styleSheet ko barhatay jain jis ko apne component me add kia tha.
+
+Ap is baat ko tarjeeh de saktay hain kai ap aik specific component kai lia private styles de saktay hain or har cheez us component me dal saktay hain jis ki us component ko zarorat hai---Code ----HTML or ---CSS sab aik jaga.
+
+Ye nukta-e-nazar (Approach) Component ko dubara kahein or istemal karnay me asani deta hai or (Component Intended) ko zahir karein agerchai (Even) global styles mukhtalif hon.
+
+Ap inline private styles define karein gain ```@Component.styles``` array me ya phir stylesheet file ki tarah kai jo shanakht yafta (Identified) hai ```@Component.styleUrls``` array me.
+
+jab CLI ```HeroesComponent``` ko banati hai. to wo aik ```heroes,component.css``` nami khali styleSheet banati hai ```HeroesComponent``` kai lia or ```@Component.styleUrls``` me is tarah point karein.
+
+> src/app/heroes/heroes.component.ts (@Component)
+
+```javascript
+@Component({
+  selector: 'app-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
+})
+```
+```herpes.component.css``` file ko kholein or ```HeroesComponent``` kai lia private CSS styles ko paste karein.Is guide kai nichey ap in sab ko ![final Code Review](https://angular.io/tutorial/toh-pt2#final-code-review) me dekh sakein gain.
+
+> Styles or StylesSheet ```@Component``` metadata me identified hain jin ka Scope us specific component tak hai. ```heroes.component.css``` styles sirf ```HeroesComponent``` par apply hongai or bahiri (Outer) HTML ko muta'asir (Effect) nahi karein gai ya kisi or HTML ko jo kai kisi or component me hai.
+
+## Master/Detail
