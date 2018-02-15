@@ -117,3 +117,63 @@ jab CLI ```HeroesComponent``` ko banati hai. to wo aik ```heroes,component.css``
 > Styles or StylesSheet ```@Component``` metadata me identified hain jin ka Scope us specific component tak hai. ```heroes.component.css``` styles sirf ```HeroesComponent``` par apply hongai or bahiri (Outer) HTML ko muta'asir (Effect) nahi karein gai ya kisi or HTML ko jo kai kisi or component me hai.
 
 ## Master/Detail
+
+Jab user kisi hero ko click karta hai master lst me se,Component muntakhib (Selected) hero ki detail ko page kai nechay walay hisay me dikhae ga.
+
+Is section me, Ap hero item click event ko listen kar rahay hongai or hero ki detail ko update kar rahay hongai.
+
+## Click Event Binding Add karein
+
+Aik click event binding add karein ```<li>``` me is tarah:
+
+> heroes.component.html (template excerpt)
+```<li *ngFor="let hero of heroes" (click)="onSelect(hero)">```
+
+ye aik angular ![Event Binding](https://angular.io/guide/template-syntax#event-binding) syntax ki misaal (Example) hai.
+
+```click``` kai ird gird (around) (Parentheses) angular ko ye batatai hain kai ```<li>``` element ```click``` event ko listen kar raha hai. Jab user ```<li>``` par click karay ga, to angular ```onSelect(Hero) expression ko (Execute) kar dega.
+
+```onSelect()``` aik ```HeroComponent``` ka method hai jis ko ab abhi likhnay walay hain.Angular isko ```hero```object kai sath Call karta hai jo kai ```<li>``` kai click pe zahir hota hai, usse ```hero``` ko kai jo pehlay ```*ngFor``` expression me defined hai.
+
+## Click Event Handler ko Add karein
+
+Component ki ```hero``` property ko ```selectedHero``` kai nam ka sath badal dein mager usko assign na karein. Yahan application kai shoro hotay hi koi hero selected nahi hoga.
+
+man darja (Following) method ko add karein,, jo kai click shuda (Clicked) hero ko template se component kai ```selectedHero``` kai sath assign kardega.
+
+> src/app/heroes/heroes.component.ts (onSelect)
+``` javascript
+selectedHero: Hero;
+
+onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+}
+```
+
+## Detail Template ko Update karein
+
+Template ab bhi musalsal (Still) component kai puranay ```hero``` property ki (Taraf) refer kar raha hai jo kai ziyada dair tak muyasar (Exists) nahi rahay gi.
+```hero``` ko ```selectedHero``` kai sath rename kar dein.
+
+> heroes.component.html (selected hero details)
+
+``` javascript
+<h2>{{ selectedHero.name | uppercase }} Details</h2>
+<div><span>id: </span>{{selectedHero.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedHero.name" placeholder="name">
+  </label>
+</div>
+```
+
+## Khali (Empty) details ko *nglf kai zareea chupa dein 
+
+Browser kai refresh honay kai bad , application kharab ho chuki hai.
+Browser kai developer tools ko kholein or console ki janib is tarah kai aik error ko talash karein:
+
+```HeroesComponent.html:3 ERROR TypeError: Cannot read property 'name' of undefined```
+
+Ab kisi list item par click karein, App dobara kam karnay la'aik lagnay lagai gi. Heroes list me dikhna shoro ho jain gain or click shuda (Clicked) hero ki detail page kai nichlay hissay ki janib dikhein gi.
+
+## Kia Howa (What Happened?)
